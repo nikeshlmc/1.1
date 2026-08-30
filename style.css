@@ -1,0 +1,87 @@
+* {
+    font-family: "Liberation Sans", "Symbols Nerd Font Mono", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #ffffff;
+}
+
+/* Global Pill Styling */
+.modules-left > widget > *,
+.modules-center > widget > *,
+.modules-right > widget > * {
+    background: rgba(15, 15, 15, 0.85);
+    color: #eeeeee;
+    border-radius: 999px;
+    padding: 5px 18px;
+    margin: 3px 4px;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.2), 0 0 16px rgba(0, 255, 255, 0.05);
+}
+
+.modules-left > widget > *:hover,
+.modules-right > widget > *:hover {
+    background: rgba(35, 35, 35, 0.9);
+}
+
+/* Launcher Specifics */
+#custom-launcher {
+    font-size: 17px;
+    padding: 6px 19px;
+}
+
+/* Workspaces Container */
+#workspaces {
+    background: rgba(15, 15, 15, 0.85);
+    border-radius: 9999px;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.2), 0 0 16px rgba(0, 255, 255, 0.05);
+    padding: 3px 4px;
+    margin: 3px 4px;
+}
+
+/* Inactive Workspace Buttons */
+#workspaces button {
+    background: transparent;
+    color: #A0A0A0;
+    border-radius: 9999px;
+    padding: 2px 10px;
+    min-width: 24px;
+    font-size: 13px;
+    margin: 0 1px;
+    transition: all 0.1s ease-out;
+}
+
+/* ACTIVE WORKSPACE BUTTON */
+#workspaces button.focused,
+#workspaces button.active {
+    background: #C0C0C0;
+    color: #111111;
+    padding: 2px 18px;
+    min-width: 32px;
+}
+
+#workspaces button:hover:not(.focused):not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+    color: #eeeeee;
+}
+
+/* Individual Module Overrides */
+#mpris     { color: #dddddd; }
+#clock     { font-weight: 600; letter-spacing: 0.02em; }
+#network   { color: #eeeeee; }
+
+/* Battery & Volume Modules */
+#pulseaudio, #battery { color: #C0C0C0; }
+#pulseaudio.muted     { color: #666666; }
+
+#battery.discharging.warning  { color: #f0a500; }
+#battery.discharging.critical { color: #e05c5c; }
